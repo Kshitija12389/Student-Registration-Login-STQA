@@ -1,153 +1,158 @@
-
-/* ===== General Page Styling ===== */
+/* Reset */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
-    margin: 0;
-    padding: 40px 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
     min-height: 100vh;
-    color: #263238;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
+    color: #1e293b;
 }
 
-/* ===== Main Heading ===== */
+/* Heading */
 h1 {
     text-align: center;
-    color: #283593;
-    font-size: 30px;
-    margin-bottom: 10px;
+    color: #312e81;
+    font-size: 36px;
+    margin: 25px 0 12px;
 }
 
-body > p {
+.subtitle {
     text-align: center;
-    color: #546e7a;
-    margin-bottom: 25px;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 16px;
 }
 
-/* ===== Registration Form Card ===== */
-#registrationForm {
-    background: #ffffff;
+/* Registration Form */
+#novalidate {
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(49, 46, 129, 0.12);
 }
 
-/* ===== Form Labels ===== */
-#registrationForm label {
+/* Labels */
+#novalidate label {
     display: block;
-    margin-top: 16px;
-    margin-bottom: 7px;
-    font-weight: bold;
-    color: #37474f;
+    margin: 16px 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
 }
 
-/* ===== Input Fields ===== */
-#registrationForm input {
+/* Input Fields */
+#novalidate input {
     display: block;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #cfd8dc;
-    border-radius: 7px;
+    padding: 13px 14px;
     font-size: 15px;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: 0.25s ease;
 }
 
-#registrationForm input:focus {
-    border-color: #3949ab;
-    box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.12);
+#novalidate input:focus {
+    border-color: #6366f1;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
 }
 
-/* ===== Register and Login Buttons ===== */
-#registerButton,
-#loginRedirectButton {
-    display: block;
+/* Register Button */
+#registerButton {
     width: 100%;
-    padding: 13px;
-    border: 2px solid #3949ab;
-    border-radius: 7px;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #4f46e5, #3730a3);
+    color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-/* Register button */
-#registerButton {
-    margin-top: 25px;
-    background: #3949ab;
-    color: #ffffff;
+    transition: 0.25s ease;
 }
 
 #registerButton:hover {
-    background: #283593;
+    background: linear-gradient(135deg, #4338ca, #312e81);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.2);
 }
 
-/* ===== Login Redirect Section ===== */
-.login-link {
-    max-width: 480px;
-    width: 100%;
-    margin: 22px auto;
-    padding: 20px 30px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-}
-
-.login-link p {
-    margin: 0 0 15px;
-    color: #546e7a;
-    font-size: 15px;
-}
-
-/* Login button */
-#loginRedirectButton {
-    background: #ffffff;
-    color: #3949ab;
-}
-
-#loginRedirectButton:hover {
-    background: #3949ab;
-    color: #ffffff;
-}
-
-/* ===== Validation Message ===== */
+/* Message */
 #message {
     max-width: 480px;
     margin: 15px auto;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* ===== Keyboard Accessibility ===== */
-#registerButton:focus-visible,
-#loginRedirectButton:focus-visible {
-    outline: 3px solid #7986cb;
+/* Login Section */
+.login-link {
+    max-width: 480px;
+    margin: 24px auto;
+    padding: 24px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(49, 46, 129, 0.10);
+}
+
+.login-link p {
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+/* Login Button */
+#loginRedirectButton {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #4f46e5;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #4338ca;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#loginRedirectButton:hover {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+/* Keyboard Accessibility */
+button:focus-visible {
+    outline: 3px solid #a5b4fc;
     outline-offset: 3px;
 }
 
-/* ===== Mobile Responsive Design ===== */
+/* Mobile Responsive */
 @media (max-width: 600px) {
     body {
         padding: 25px 15px;
     }
 
     h1 {
-        font-size: 25px;
+        font-size: 28px;
     }
 
-    #registrationForm {
-        padding: 22px;
+    #novalidate {
+        padding: 24px 20px;
     }
 
     .login-link {
-        padding: 20px 22px;
+        padding: 20px;
     }
 }
