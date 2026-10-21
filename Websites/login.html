@@ -1,31 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login System</title>
+    <title>Student Login</title>
+
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
-    <h1>Student Login</h1>
-    <p>Welcome back! Please log in.</p>
+    <div class="login-container">
 
-    <form id="loginForm" novalidate>
-        <label for="loginEmail">Email Address:</label>
-        <input type="email" id="loginEmail" name="loginEmail"
-               placeholder="Enter your email">
+        <div class="login-header">
+            <h1>Welcome Back!</h1>
+            <p>Please log in to your account</p>
+        </div>
 
-        <label for="loginPassword">Password:</label>
-        <input type="password" id="loginPassword" name="loginPassword"
-               placeholder="Enter your password">
+        <form id="loginForm" novalidate>
 
-        <button type="submit" id="loginButton">Login</button>
-    </form>
+            <div class="form-group">
+                <label for="loginName">Full Name</label>
+                <input type="text" id="loginName"
+                       placeholder="Enter your registered name">
+            </div>
 
-    <p id="loginMessage"></p>
+            <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail"
+                       placeholder="Enter your registered email">
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword"
+                       placeholder="Enter your password">
+            </div>
+
+            <button type="submit" id="loginButton">Login</button>
+
+            <p id="loginMessage" aria-live="polite"></p>
+
+        </form>
+
+        <div class="login-footer">
+            <p>Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+        </div>
+
+    </div>
 
     <script src="login.js"></script>
-
 </body>
 </html>

@@ -1,4 +1,5 @@
-/* ===== Global Styling ===== */
+
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,99 +8,204 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 30px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #ede9fe,
+        #fce7f3
+    );
+
     color: #1e293b;
 }
 
-/* ===== Page Heading ===== */
-h1 {
-    text-align: center;
-    color: #312e81;
-    font-size: 36px;
-    font-weight: 700;
-    margin: 25px 0 12px;
-    letter-spacing: -0.5px;
+/* Login Card */
+.login-container {
+    max-width: 440px;
+    width: 100%;
+    padding: 38px 35px;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    box-shadow: 0 18px 50px rgba(49, 46, 129, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-body > p {
+/* Heading */
+.login-header {
     text-align: center;
-    color: #64748b;
-    font-size: 16px;
     margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #312e81;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 14px;
     line-height: 1.6;
 }
 
-/* ===== Registration and Login Forms ===== */
-#loginForm,
-#registrationForm,
-#registerForm,
-form {
-    max-width: 480px;
+/* Form */
+#loginForm {
     width: 100%;
-    margin: 0 auto;
-    padding: 32px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(49, 46, 129, 0.12);
 }
 
-/* ===== Form Labels ===== */
-form label {
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
     display: block;
+    margin-bottom: 8px;
     font-size: 14px;
     font-weight: 600;
     color: #334155;
-    margin: 16px 0 8px;
 }
 
-/* ===== Input Fields ===== */
-form input,
-form select,
-form textarea {
+/* Input Fields */
+.form-group input {
     display: block;
     width: 100%;
-    padding: 13px 14px;
+    height: 48px;
+    padding: 12px 14px;
+
     font-family: inherit;
-    font-size: 15px;
+    font-size: 14px;
     color: #1e293b;
+
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 9px;
+
     outline: none;
-    transition: all 0.25s ease;
+    transition: 0.25s ease;
 }
 
-/* Placeholder */
-form input::placeholder,
-form textarea::placeholder {
+.form-group input::placeholder {
     color: #94a3b8;
 }
 
-/* Focus Effect */
-form input:focus,
-form select:focus,
-form textarea:focus {
+.form-group input:focus {
     background: #ffffff;
     border-color: #6366f1;
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
 }
 
-/* ===== Buttons ===== */
-#loginButton,
-#registerButton,
-#registerBtn,
-form button[type="submit"],
-form input[type="submit"] {
+/* Login Button */
+#loginButton {
     display: block;
     width: 100%;
     margin-top: 25px;
     padding: 14px;
-    background: linear-gradient(135deg, #4f46e5, #3730a3);
-    color: #ffffff;
+
     border: none;
-    border-radius: 10px;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #3730a3
+    );
+
+    color: #ffffff;
+    font-family: inherit;
     font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#loginButton:hover {
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #312e81
+    );
+
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+#loginButton:active {
+    transform: translateY(0);
+}
+
+/* Validation Message */
+#loginMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#loginMessage.success {
+    color: #15803d;
+}
+
+#loginMessage.error {
+    color: #dc2626;
+}
+
+/* Register Section */
+.login-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.login-footer p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.login-footer a {
+    color: #4f46e5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    color: #3730a3;
+    text-decoration: underline;
+}
+
+/* Keyboard Accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .login-container {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .login-header h1 {
+        font-size: 26px;
+    }
 }
