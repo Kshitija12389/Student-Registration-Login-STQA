@@ -1,0 +1,153 @@
+
+/* ===== General Page Styling ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #263238;
+}
+
+/* ===== Main Heading ===== */
+h1 {
+    text-align: center;
+    color: #283593;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+body > p {
+    text-align: center;
+    color: #546e7a;
+    margin-bottom: 25px;
+}
+
+/* ===== Registration Form Card ===== */
+#registrationForm {
+    background: #ffffff;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Form Labels ===== */
+#registrationForm label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #37474f;
+}
+
+/* ===== Input Fields ===== */
+#registrationForm input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#registrationForm input:focus {
+    border-color: #3949ab;
+    box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.12);
+}
+
+/* ===== Register and Login Buttons ===== */
+#registerButton,
+#loginRedirectButton {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #3949ab;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Register button */
+#registerButton {
+    margin-top: 25px;
+    background: #3949ab;
+    color: #ffffff;
+}
+
+#registerButton:hover {
+    background: #283593;
+}
+
+/* ===== Login Redirect Section ===== */
+.login-link {
+    max-width: 480px;
+    width: 100%;
+    margin: 22px auto;
+    padding: 20px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login-link p {
+    margin: 0 0 15px;
+    color: #546e7a;
+    font-size: 15px;
+}
+
+/* Login button */
+#loginRedirectButton {
+    background: #ffffff;
+    color: #3949ab;
+}
+
+#loginRedirectButton:hover {
+    background: #3949ab;
+    color: #ffffff;
+}
+
+/* ===== Validation Message ===== */
+#message {
+    max-width: 480px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ===== Keyboard Accessibility ===== */
+#registerButton:focus-visible,
+#loginRedirectButton:focus-visible {
+    outline: 3px solid #7986cb;
+    outline-offset: 3px;
+}
+
+/* ===== Mobile Responsive Design ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #registrationForm {
+        padding: 22px;
+    }
+
+    .login-link {
+        padding: 20px 22px;
+    }
+}
